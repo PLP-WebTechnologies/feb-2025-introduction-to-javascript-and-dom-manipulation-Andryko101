@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-order Lists</title>
+    <style>
+        .dark-mode {
+            background-color: #222;
+            color: white;
+        }
+        *{
+            font-family: sans-serif;
+        }
+    </style>
+    <script src="index.js"></script>
+</head>
+<body>
+    <button onclick="toggleMode()">Switch Mode</button>
+    <h1>Pre-order Lists</h1>
+    <p>This is a list of persons who are in line for the new Macbook Air</p>
+    <form>
+        <input type="text" id="name" placeholder="Enter full-name" required><br>
+        <input type="text" id="address" placeholder="Enter Address" required><br>
+        <input type="number" id="phone" placeholder="Enter Phone Number" pattern="{10}" required><br>
+        <input type="number" id="order_quantity" step="1" placeholder="Order Quantity"><br>
+        <select id="payment_option">
+            <option value="credit_card">Credit Card</option>
+            <option value="mpesa">Mobile Money(Mpesa)</option>
+            <option value="bank transfer">Bank Transfer</option>
+        </select>
+        <button name="submit"id="submit" onclick="listfunc()">Submit</button>
+    </form>
+    <table id="table" style="text-align: center; border-spacing: 10px;">
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+            <th>Order Quantity</th>
+            <th>Payment option</th>
+        </tr>
+        <tr>
+            <td>John Njagi</td>
+            <td>Kenol, Murang'a</td>
+            <td>0799213781</td>
+            <td>1</td>
+            <td>Mobile Payment</td>
+        </tr>
+    </table>
+</body>
+</html>
